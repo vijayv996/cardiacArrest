@@ -20,7 +20,11 @@ def index():
         bmi = float(request.form['bmi'])
         hr = float(request.form['hr'])
         glucose = float(request.form['glucose'])
-        input_data = [[gender,age,smoking,stroke,hypertension,ap_hi,ap_lo,bmi,hr,glucose]]
+        metabolicSyndrome = float(request.form['metabolicSyndrome'])
+        exerciseAngina = float(request.form['exerciseAngina'])
+        fastingBloodSugar = float(request.form['fastingBloodSugar'])
+        usesStimulantDrugs = float(request.form['usesStimulantDrugs'])
+        input_data = [[gender,age,smoking,stroke,hypertension,ap_hi,ap_lo,bmi,hr,glucose,exerciseAngina,fastingBloodSugar,usesStimulantDrugs,metabolicSyndrome]]
         prediction = model.predict(input_data)
         statement = ''
         if prediction==1:
