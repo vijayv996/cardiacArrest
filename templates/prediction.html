@@ -4,45 +4,71 @@
     <title>Cardiac Arrest Prediction</title>
     <style>
       body {
-        background-color: #f2f2f2;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, sans-serif;
+        background-color: #212529; /* Dark background */
+        color: #f0f0f0; /* Light text color */
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Set minimum height for full viewport */
       }
-
+  
       h1 {
-        color: #4CAF50;
         text-align: center;
-        margin-top: 50px;
-        animation: pulse 1s ease-out;
-        animation-iteration-count: infinite;
+        color: inherit; /* Inherit from body text color */
+        margin-bottom: 30px;
       }
-
-      p {
-        text-align: center;
-        font-size: 24px;
-        color: #333333;
-        margin-top: 50px;
-        animation: fadein 2s;
+  
+      form {
+        max-width: 600px;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #30363b; /* Darker background for form */
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); /* Subdued shadow */
       }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: inherit;
+        font-weight: bold;
       }
-
-      @keyframes fadein {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+  
+      input[type="number"], input[type="text"], select {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #444a50; /* Darker border color */
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        color: #f0f0f0; /* Light text color for inputs */
+        background-color: #212529; /* Dark background for inputs */
+      }
+  
+      select {
+        height: 40px;
+      }
+  
+      input[type="submit"] {
+        background-color: #38a3a5; /* Lighter blue for submit button */
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      input[type="submit"]:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+      }
+  
+      .error {
+        color: #ff0000;
+        margin-bottom: 10px;
       }
     </style>
   </head>
