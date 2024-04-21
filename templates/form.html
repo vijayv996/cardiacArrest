@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cardiac Arrest Prediction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      h1 {
+    text-align: center;
+    color: #333333;
+    margin-top: 30px;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333;
+    font-weight: bold;
+  }
+  
+  input[type="number"], input[type="text"], select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  
+  select {
+    height: 40px;
+  }
+  
+  input[type="submit"] {
+    background-color: #0099ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0080ff;
+  }
+  
+  .error {
+    color: #ff0000;
+    margin-bottom: 10px;
+  }
+</style>
+  </head>
+  <body>
+    <h1>Cardiac Arrest Prediction</h1>
+    <form method="POST" action="/">
+      <label for="age">Age:</label>
+      <input type="number" name="age" required>
+      <br>
+      <label for="gender">Gender:</label>
+      <select name="gender" required>
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+      </select>
+      <br>
+      <label for="smoking">
+      <label for="smoking">Smoking:</label>
+      <select name="smoking" required>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+      <br>
+      <label for="hypertension">Hypertension:</label>
+      <select name="hypertension" required>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+      <br>
+      <label for="stroke">Stroke:</label>
+      <select name="stroke" required>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+      <br>
+      <label for="ap_hi">Systolic blood pressure (mmHg):</label>
+      <input type="text" name="ap_hi" required>
+      <br>
+      <label for="ap_lo">Diastolic blood pressure (mmHg):</label>
+      <input type="text" name="ap_lo" required>
+      <br>
+      <label for="bmi">Body mass index (kg/m2):</label>
+      <input type="text" name="bmi" required>
+      <br>
+      <label for="hr">Heart rate (bpm):</label>
+      <input type="text" name="hr" required>
+      <br>
+      <label for="glucose">Glucose (mg/dL):</label>
+      <input type="text" name="glucose" required>
+      <br>
+      <input type="submit" value="Predict">
+    </form>
+  </body>
+</html>

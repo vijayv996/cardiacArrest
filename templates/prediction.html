@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Cardiac Arrest Prediction</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        color: #4CAF50;
+        text-align: center;
+        margin-top: 50px;
+        animation: pulse 1s ease-out;
+        animation-iteration-count: infinite;
+      }
+
+      p {
+        text-align: center;
+        font-size: 24px;
+        color: #333333;
+        margin-top: 50px;
+        animation: fadein 2s;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cardiac Arrest Prediction</h1>
+    <p>{{ prediction }}</p>
+  </body>
+</html>
