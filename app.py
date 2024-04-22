@@ -29,9 +29,11 @@ def index():
         statement = ''
         if prediction==1:
             statement = "Cardiac arrest may occur."
+            color = "red"
         elif prediction==0:
             statement = "Cardiac arrest may not occur."
+            color = "green"
         # statement+=str(prediction)
-        return render_template('prediction.html', prediction=statement)
+        return render_template('prediction.html', prediction=statement, colour = color)
     else:
         return render_template('form.html')
